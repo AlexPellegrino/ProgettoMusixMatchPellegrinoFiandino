@@ -34,7 +34,7 @@ public class Canzone extends JFrame implements ActionListener{
     public Canzone(Song song) {
         super("Canzone");
         this.song = song;
-        setBounds(400, 280, 700, 77);
+        setBounds(700, 280, 1000, 500);
 
         this.strAutore = song.getArtistName();
         this.strTitolo = song.getTrackName();
@@ -58,7 +58,7 @@ public class Canzone extends JFrame implements ActionListener{
 
         ImageIcon iconLogo = new ImageIcon("Image/image.jpg");
         Image image = iconLogo.getImage();
-        Image newImage = image.getScaledInstance(30, 30,  java.awt.Image.SCALE_SMOOTH); // scale it the smooth way
+        Image newImage = image.getScaledInstance(50, 50,  java.awt.Image.SCALE_SMOOTH); // scale it the smooth way
         ImageIcon iconLogoScaled = new ImageIcon(newImage);
         JLabel lblLogo = new JLabel(iconLogo);
         lblLogo.setIcon(iconLogoScaled);
@@ -93,7 +93,7 @@ public class Canzone extends JFrame implements ActionListener{
 
         ImageIcon iconLogo1 = new ImageIcon("Image/img.png");
         Image image1 = iconLogo1.getImage(); // transform it
-        Image newImage1 = image1.getScaledInstance(264, 40,  java.awt.Image.SCALE_SMOOTH);
+        Image newImage1 = image1.getScaledInstance(462, 70,  Image.SCALE_AREA_AVERAGING);
         ImageIcon iconLogoScaled1 = new ImageIcon(newImage1);
         JLabel lblLogo1 = new JLabel();
         lblLogo1.setIcon(iconLogoScaled1);

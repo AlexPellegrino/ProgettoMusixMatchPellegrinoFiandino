@@ -1,7 +1,6 @@
 package frontend;
 
-import java.awt.BorderLayout;
-import java.awt.FlowLayout;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -33,7 +32,7 @@ public class MainFrame extends JFrame implements ActionListener{
     public MainFrame() {
         super("Cerca canzoni");
 
-        setBounds(400, 200, 700, 73);
+        setBounds(400, 200, 700, 300);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         initComponents();
     }
@@ -57,18 +56,21 @@ public class MainFrame extends JFrame implements ActionListener{
         p.setLayout(new FlowLayout());
 
         lblAutore = new JLabel("Autore");
+        lblAutore.setForeground(Color.WHITE);
         p.add(lblAutore);
 
         txtAutore = new JTextField(10);
         p.add(txtAutore);
 
         lblTitolo = new JLabel("Titolo");
+        lblTitolo.setForeground(Color.WHITE);
         p.add(lblTitolo);
 
         txtTitolo = new JTextField(10);
         p.add(txtTitolo);
 
         lblAlbum = new JLabel("Album");
+        lblAlbum.setForeground(Color.WHITE);
         p.add(lblAlbum);
 
         txtAlbum = new JTextField(10);
@@ -81,7 +83,7 @@ public class MainFrame extends JFrame implements ActionListener{
         //testoCanzone = new TestoCanzone(null);
         p.setBackground(TestoCanzone.coloreCasuale());
 
-        add(p, BorderLayout.NORTH);
+        add(p);
     }
 
     @Override
